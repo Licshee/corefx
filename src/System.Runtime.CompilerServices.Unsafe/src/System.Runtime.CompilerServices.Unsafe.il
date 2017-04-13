@@ -369,6 +369,28 @@
         ret 
   } // end of method Unsafe::AreSame
 
+  .method public hidebysig static !!T VolatileRead<T>(!!T& 'address') cil managed aggressiveinlining
+  {
+        .custom instance void System.Runtime.Versioning.NonVersionableAttribute::.ctor() = ( 01 00 00 00 )
+        .maxstack 1
+        ldarg.0
+        volatile.
+        ldobj !!T
+        ret
+  } // end of method Unsafe::VolatileRead
+  
+  .method public hidebysig static !!T VolatileWrite<T>([out] !!T& 'address', !!T 'value') cil managed aggressiveinlining
+  {
+        .custom instance void System.Runtime.Versioning.NonVersionableAttribute::.ctor() = ( 01 00 00 00 )
+        .maxstack 2
+        ldarg.0
+        ldarg.1
+        volatile.
+        stobj !!T
+        ldarg.1
+        ret
+  } // end of method Unsafe::VolatileWrite
+
 } // end of class System.Runtime.CompilerServices.Unsafe
 
 .class private auto ansi sealed beforefieldinit System.Runtime.Versioning.NonVersionableAttribute
