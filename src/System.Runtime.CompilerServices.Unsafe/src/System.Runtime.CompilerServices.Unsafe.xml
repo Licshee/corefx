@@ -220,5 +220,25 @@
             <param name="value">The value to initialize the block to.</param>
             <param name="byteCount">The number of bytes to initialize.</param>
         </member>
+        <member name="M:System.Runtime.CompilerServices.Unsafe.VolatileRead``1(``0@)">
+            <summary>
+            Reads a value of type <typeparamref name="T"/> from the given location.
+            The value is the latest written by any processor in a computer,
+            regardless of the number of processors or the state of processor cache.
+            </summary>
+            <typeparam name="T">The type to read.</typeparam>
+            <param name="address">The location to read from.</param>
+            <returns>A value of type <typeparamref name="T"/> read from the given location.</returns>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.Unsafe.VolatileWrite``1(``0@,``0)">
+            <summary>
+            Writes a value of type <typeparamref name="T"/> to the given location immediately,
+            so that the value is visible to all processors in the computer.
+            </summary>
+            <typeparam name="T">The type of value to write.</typeparam>
+            <param name="address">The location to write to.</param>
+            <param name="value">The value to write.</param>
+            <returns>A value of type <typeparamref name="T"/> wrote to the given location.</returns>
+        </member>
     </members>
 </doc>
